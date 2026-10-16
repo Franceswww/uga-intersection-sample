@@ -6,7 +6,7 @@ Prepared for the AI Team, from the UGA roadside-camera study (15 intersections, 
 
 | item | content |
 |---|---|
-| `clips/NN_<Site>.mp4` (**in the v1.0 release**, not in the repository: 4.8 GB, see below) | the same 15 minutes, **Monday 2026-03-23, 13:00-13:15**, at every intersection (4.4 GB in all); 4K HEVC, ~14 fps, no audio. Clips are cut without re-encoding, so each one starts at the last keyframe before 13:00, up to about one minute early; `clips/manifest.csv` gives each clip's true start time and the camera it comes from |
+| `clips/NN_<Site>.mp4` (**not in this repository**: 4.8 GB, in the OneDrive package, see below) | the same 15 minutes, **Monday 2026-03-23, 13:00-13:15**, at every intersection (4.4 GB in all); 4K HEVC, ~14 fps, no audio. Clips are cut without re-encoding, so each one starts at the last keyframe before 13:00, up to about one minute early; `clips/manifest.csv` gives each clip's true start time and the camera it comes from |
 | `zones/<Site>.json` | zone polygons in pixel coordinates of that clip's camera (road arms, junction box, crosswalks, sidewalks) |
 | `zones/<Site>_names.json` | what each zone is: `type` (vehicle_road / ped_crosswalk / ped_sidewalk), a readable `name`, the road `arm` letter for vehicle zones, the `corner` a sidewalk leads to |
 | `run_site.py` | **the study's full chain on one clip**: track -> clean/stitch -> counts (use this to reproduce the study's numbers) |
@@ -24,9 +24,9 @@ after the 12:55 class dismissal; it is the busiest or second-busiest window at 1
 
 ## Getting the clips
 
-The videos are too large for the repository itself; they are attached to the release
-**[v1.0](https://github.com/Franceswww/uga-intersection-sample/releases/tag/v1.0)** (15 files, 4.8 GB).
-Download them into `clips/` next to `manifest.csv` and the commands below work as written.
+The videos are too large for GitHub. The complete package, including the 15 clips (4.8 GB),
+is shared as a OneDrive folder (link provided by email); this repository mirrors its code and
+zone files. Put the clips in `clips/` next to `manifest.csv` and the commands below work as written.
 
 ## Which intersections to start with
 
