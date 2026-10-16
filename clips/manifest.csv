@@ -1,0 +1,16 @@
+no,site,clip,camera,zones,requested_start,actual_start,lead_s,size_MB
+1,BaxterHull,01_BaxterHull.mp4,02,Baxter_at_Hull.json,13:00,12:59:58.9,1.1,262.4
+2,BocockFounders,02_BocockFounders.mp4,01,Bocock_Street.json,13:00,12:59:33.1,26.9,419.8
+3,BookstoreSW,03_BookstoreSW.mp4,02,Bookstore_Southwest.json,13:00,12:59:51.2,8.8,221.1
+4,LumpkinBaldwin,04_LumpkinBaldwin.mp4,02,Lumpkin_at_Baldwin.json,13:00,12:59:57.5,2.5,396.0
+5,LumpkinBaxter,05_LumpkinBaxter.mp4,02,Lumpkin_at_Baxter.json,13:00,12:59:41.2,18.8,404.0
+6,LumpkinCedar,06_LumpkinCedar.mp4,04,Lumpkin_at_Cedar.json,13:00,12:59:41.2,18.8,392.2
+7,LumpkinNoName,07_LumpkinNoName.mp4,02,Lumpkin_at_No_Name_Park.json,13:00,12:59:56.8,3.2,304.3
+8,LumpkinTate,08_LumpkinTate.mp4,02,Lumpkin_at_Tate.json,13:00,12:59:18.2,41.8,404.4
+9,MLCQuad,09_MLCQuad.mp4,single,MLC_Georgia_Quad.json,13:00,12:59:58.1,1.9,218.7
+10,SanfordBaldwin,10_SanfordBaldwin.mp4,02,Sanford_at_Baldwin.json,13:00,12:59:16.9,43.1,429.3
+11,SanfordCedar,11_SanfordCedar.mp4,02,Sanford_at_Cedar.json,13:00,12:59:16.1,43.9,383.5
+12,SanfordHooper,12_SanfordHooper.mp4,01,Sanford_at_Hooper_Street.json,13:00,12:59-13:00 (keyframe lead not measured; repaired copy),,459.2
+13,SanfordNB,13_SanfordNB.mp4,02,Sanford_Drive_at_Northbound.json,13:00,12:59:21.4,38.6,191.6
+14,SanfordPhysics,14_SanfordPhysics.mp4,03,Sanford_Drive_at_Physics_Parking_lot.json,13:00,12:59:15.3,44.7,316.2
+15,StadiumWest,15_StadiumWest.mp4,03,Stadium_West.json,13:00,12:59:34.0,26.0,337.7

@@ -1,0 +1,97 @@
+{
+ "location": "Sanford Drive at Physics Parking Lot",
+ "camera": "UGA-C.5.5 cam03. LOCATION CORRECTED 2026-09-01 (Dr. Yao): the camera is at the Physics (to Tate) bus stop on Sanford Dr, NOT at the position previously plotted further south-east. The lat/lon on file (~33.949021,-83.376289) was given as an approximation and should be replaced with a surveyed value. The frame is consistent with the bus-stop location: a mid-block marked crosswalk on Sanford Dr with the S01 lot entrance on the south side.",
+ "note": "Semantics supplied by the user (2026-08-28). Sanford Dr runs EAST-WEST here (user correction), two-way single lane each direction. Z08 is the S01 parking-deck driveway on the SOUTH side. PED DESTINATIONS (user, 3 groups): \"Sanford direction (E)\" = Z05/Z06; \"Physics side (S)\" = Z02; \"Geology side (N)\" = Z03/Z04. Ledger keeps per-zone detail so Z04 (Geology path) can be split out later without a rerun. Z01 is the marked crosswalk - usage is a separate column, never a filter.",
+ "zones": {
+  "Zone_01": {
+   "name": "crosswalk_over_sanford",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_02": {
+   "name": "sidewalk_physics_south",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Physics side (S)"
+  },
+  "Zone_03": {
+   "name": "sidewalk_geology_north",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Geology side (N)"
+  },
+  "Zone_04": {
+   "name": "landing_geology_path",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Geology side (N)",
+   "note": "platform where the path to the Geology Hydrothermal Lab meets the road; kept inside the Geology group (user)"
+  },
+  "Zone_05": {
+   "name": "sidewalk_far_east_north",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Sanford direction (E)"
+  },
+  "Zone_06": {
+   "name": "pad_far_east_s01",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Sanford direction (E)"
+  },
+  "Zone_07": {
+   "name": "road_sanford_east_arm",
+   "type": "vehicle_road",
+   "short": "SanfordE(Z07)",
+   "arm": "E",
+   "confidence": "user"
+  },
+  "Zone_08": {
+   "name": "road_s01_driveway_arm",
+   "type": "vehicle_road",
+   "short": "LotS01(Z08)",
+   "arm": "S",
+   "confidence": "user",
+   "note": "S01 parking-deck driveway, south side"
+  },
+  "Zone_09": {
+   "name": "road_sanford_west_arm",
+   "type": "vehicle_road",
+   "short": "SanfordW(Z09)",
+   "arm": "W",
+   "confidence": "user"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_09",
+   "to": "Zone_07",
+   "label": "THROUGH     (eastbound, Sanford W->E)"
+  },
+  {
+   "from": "Zone_07",
+   "to": "Zone_09",
+   "label": "THROUGH     (westbound, Sanford E->W)"
+  },
+  {
+   "from": "Zone_09",
+   "to": "Zone_08",
+   "label": "RIGHT turn  (Sanford eastbound -> S01 lot)"
+  },
+  {
+   "from": "Zone_07",
+   "to": "Zone_08",
+   "label": "LEFT turn   (Sanford westbound -> S01 lot)"
+  },
+  {
+   "from": "Zone_08",
+   "to": "Zone_07",
+   "label": "RIGHT turn  (S01 lot -> Sanford east)"
+  },
+  {
+   "from": "Zone_08",
+   "to": "Zone_09",
+   "label": "LEFT turn   (S01 lot -> Sanford west)"
+  }
+ ]
+}

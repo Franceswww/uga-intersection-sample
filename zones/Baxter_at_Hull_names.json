@@ -1,0 +1,133 @@
+{
+  "location": "Baxter at Hull",
+  "camera": "UGA-C.1.5 cam02, mounted at 33.951536,-83.378228 (NW corner)",
+  "note": "Semantics supplied by the user (hand sketch, 2026-08-15): 9/10/11 are the roadways, 1/2 the crosswalks, 3/4/5 the sidewalk under the camera, 12/13/14 the east side, 6/7/8 the south side reached by crossing Baxter. Zone_11 is Hull St.",
+  "zones": {
+    "Zone_01": {
+      "name": "crosswalk_over_baxter",
+      "type": "ped_crosswalk",
+      "confidence": "user"
+    },
+    "Zone_02": {
+      "name": "crosswalk_over_hull",
+      "type": "ped_crosswalk",
+      "confidence": "user"
+    },
+    "Zone_03": {
+      "name": "sidewalk_camera_corner_main",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "NW corner (camera)"
+    },
+    "Zone_04": {
+      "name": "sidewalk_camera_corner_south",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "NW corner (camera)"
+    },
+    "Zone_05": {
+      "name": "sidewalk_camera_corner_west",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "NW corner (camera)"
+    },
+    "Zone_06": {
+      "name": "sidewalk_south_side_curb",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Baxter St south side"
+    },
+    "Zone_07": {
+      "name": "sidewalk_south_side_wall",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Baxter St south side"
+    },
+    "Zone_08": {
+      "name": "sidewalk_south_side_far",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Baxter St south side"
+    },
+    "Zone_09": {
+      "name": "road_junction_box",
+      "type": "vehicle_road",
+      "short": "Center(Z09)",
+      "confidence": "user",
+      "role": "center",
+      "note": "the junction box only. It used to double as the east arm, which meant a car merely standing in it could read as having left eastbound. Split at the line the user drew on 2026-08-19: the far half became Zone_15, and this zone lost its center_and_arm special case, so Hull now matches the other sites - the box is crossed, never an endpoint."
+    },
+    "Zone_10": {
+      "name": "road_baxter_west_arm",
+      "type": "vehicle_road",
+      "short": "BaxterW(Z10)",
+      "confidence": "derived"
+    },
+    "Zone_11": {
+      "name": "road_hull_north_arm",
+      "type": "vehicle_road",
+      "short": "HullN(Z11)",
+      "confidence": "user"
+    },
+    "Zone_12": {
+      "name": "sidewalk_east_side_corner",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Orkin Hall (Hull St east)"
+    },
+    "Zone_13": {
+      "name": "sidewalk_east_side_path",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Orkin Hall (Hull St east)"
+    },
+    "Zone_14": {
+      "name": "sidewalk_east_side_far",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Orkin Hall (Hull St east)"
+    },
+    "Zone_15": {
+      "name": "road_baxter_east_arm",
+      "type": "vehicle_road",
+      "short": "BaxterE(Z15)",
+      "confidence": "user",
+      "arm": "E",
+      "note": "Baxter east arm, the far half of the old Zone_09 beyond the user-drawn line. A vehicle counts as entering or leaving eastbound only by crossing that line."
+    }
+  },
+  "movements": [
+    {
+      "from": "Zone_10",
+      "to": "Zone_15",
+      "label": "THROUGH     (eastbound, Baxter W->E)"
+    },
+    {
+      "from": "Zone_15",
+      "to": "Zone_10",
+      "label": "THROUGH     (westbound, Baxter E->W)"
+    },
+    {
+      "from": "Zone_10",
+      "to": "Zone_11",
+      "label": "LEFT turn   (Baxter eastbound -> Hull north)"
+    },
+    {
+      "from": "Zone_15",
+      "to": "Zone_11",
+      "label": "RIGHT turn  (Baxter westbound -> Hull north)"
+    },
+    {
+      "from": "Zone_11",
+      "to": "Zone_15",
+      "label": "LEFT turn   (Hull southbound -> Baxter east)"
+    },
+    {
+      "from": "Zone_11",
+      "to": "Zone_10",
+      "label": "RIGHT turn  (Hull southbound -> Baxter west)"
+    }
+  ],
+  "ped_groups_note": "Three pedestrian directions, one per corner of this T junction, set with the user 2026-08-20. Frame orientation, read off the three roadway zones: left = north (Hull), top = east (Baxter east), right = south, bottom = west. Zone_12/13/14 front Sanford and Barbara Orkin Hall on the east side of Hull St - they are Hull's east side, not Baxter's east arm, which is where an earlier draft label went wrong.",
+  "arms_note": "Three arms at this T junction: Zone_15 (Baxter east), Zone_10 (Baxter west), Zone_11 (Hull north). Zone_09 is the junction box and is never a movement endpoint."
+}

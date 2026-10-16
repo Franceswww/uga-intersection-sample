@@ -1,0 +1,160 @@
+{
+ "location": "Sanford at Cedar",
+ "camera": "UGA-C.2.5 cam02 - Sanford Dr x Cedar St, signalised 4-leg junction",
+ "note": "Semantics from the user (2026-08-30). LEG MAPPING (user-confirmed; my first reading was 180 deg off): image TOP = Sanford Dr SOUTH arm (A); image LEFT = Cedar St EAST arm (B); image RIGHT wide mouth = Cedar St WEST + Sanford Dr NORTH combined (C+D). C and D CANNOT be separated from this camera - their exit bundles are fully interleaved and only diverge beyond the right frame edge (h12: 33 vs 89 tails, same corridors); the user said the same ('this camera can only see two of the legs'). Every movement touching Zone_03 is therefore ambiguous between Cedar-West and Sanford-North. PED DESTINATIONS: Physics Building = Z13+Z14; Dawson Hall = Z08+Z09+Z10; Rutherford Hall = Z12; S03 parking lot = Z11 (perimeter walk) + Z05 (the lot itself). Z06/Z07 are crosswalks (usage = separate column, never a filter).",
+ "zones": {
+  "Zone_01": {
+   "name": "road_sanford_south_arm",
+   "type": "vehicle_road",
+   "short": "SanfordS(Z01)",
+   "arm": "S",
+   "confidence": "user"
+  },
+  "Zone_02": {
+   "name": "road_cedar_east_arm",
+   "type": "vehicle_road",
+   "short": "CedarE(Z02)",
+   "arm": "E",
+   "confidence": "user"
+  },
+  "Zone_03": {
+   "name": "road_west_north_arm",
+   "type": "vehicle_road",
+   "short": "W/N(Z03)",
+   "arm": "WN",
+   "confidence": "user",
+   "note": "Cedar West + Sanford North combined - they diverge off-frame and cannot be told apart here"
+  },
+  "Zone_04": {
+   "name": "road_junction_box",
+   "type": "vehicle_road",
+   "short": "Center(Z04)",
+   "role": "center",
+   "confidence": "user"
+  },
+  "Zone_05": {
+   "name": "road_s03_parking_gate_arm",
+   "type": "vehicle_road",
+   "short": "S03Lot(Z05)",
+   "arm": "P",
+   "role": "gate",
+   "corner": "S03 parking lot",
+   "confidence": "user",
+   "note": "S03 parking area; gate = appear here means came from the lot, vanish here means went into it. Corner label lets peds ending in the lot be counted."
+  },
+  "Zone_06": {
+   "name": "crosswalk_sanford_south",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_07": {
+   "name": "crosswalk_cedar_east",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_08": {
+   "name": "walk_dawson_a",
+   "type": "ped_sidewalk",
+   "corner": "Dawson Hall",
+   "confidence": "user"
+  },
+  "Zone_09": {
+   "name": "walk_dawson_b",
+   "type": "ped_sidewalk",
+   "corner": "Dawson Hall",
+   "confidence": "user"
+  },
+  "Zone_10": {
+   "name": "walk_dawson_c",
+   "type": "ped_sidewalk",
+   "corner": "Dawson Hall",
+   "confidence": "user"
+  },
+  "Zone_11": {
+   "name": "walk_s03_parking_perimeter",
+   "type": "ped_sidewalk",
+   "corner": "S03 parking lot",
+   "confidence": "user"
+  },
+  "Zone_12": {
+   "name": "walk_rutherford",
+   "type": "ped_sidewalk",
+   "corner": "Rutherford Hall",
+   "confidence": "user"
+  },
+  "Zone_13": {
+   "name": "walk_physics_a",
+   "type": "ped_sidewalk",
+   "corner": "Physics Building",
+   "confidence": "user"
+  },
+  "Zone_14": {
+   "name": "walk_physics_b",
+   "type": "ped_sidewalk",
+   "corner": "Physics Building",
+   "confidence": "user"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_03",
+   "to": "Zone_01",
+   "label": "MOVE        (W/N -> Sanford south)"
+  },
+  {
+   "from": "Zone_01",
+   "to": "Zone_03",
+   "label": "MOVE        (Sanford south -> W/N)"
+  },
+  {
+   "from": "Zone_02",
+   "to": "Zone_03",
+   "label": "MOVE        (Cedar east -> W/N)"
+  },
+  {
+   "from": "Zone_03",
+   "to": "Zone_02",
+   "label": "MOVE        (W/N -> Cedar east)"
+  },
+  {
+   "from": "Zone_01",
+   "to": "Zone_02",
+   "label": "MOVE        (Sanford south -> Cedar east)"
+  },
+  {
+   "from": "Zone_02",
+   "to": "Zone_01",
+   "label": "MOVE        (Cedar east -> Sanford south)"
+  },
+  {
+   "from": "Zone_05",
+   "to": "Zone_01",
+   "label": "MOVE        (S03 lot -> Sanford south)"
+  },
+  {
+   "from": "Zone_05",
+   "to": "Zone_02",
+   "label": "MOVE        (S03 lot -> Cedar east)"
+  },
+  {
+   "from": "Zone_05",
+   "to": "Zone_03",
+   "label": "MOVE        (S03 lot -> W/N)"
+  },
+  {
+   "from": "Zone_01",
+   "to": "Zone_05",
+   "label": "MOVE        (Sanford south -> S03 lot)"
+  },
+  {
+   "from": "Zone_02",
+   "to": "Zone_05",
+   "label": "MOVE        (Cedar east -> S03 lot)"
+  },
+  {
+   "from": "Zone_03",
+   "to": "Zone_05",
+   "label": "MOVE        (W/N -> S03 lot)"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "location": "MLC Georgia Quad",
+ "camera": "UGA-C.2.29 single stream",
+ "note": "PEDESTRIAN-ONLY plaza (user 2026-08-30). Central zones Z01+Z03 (no destination label - walks ending there are track losses mid-plaza). Destination groups by building: MLC side = Z04+Z05+Z08+Z09 + Z06 (user); S Lumpkin St = Z02; Tate Student Center = Z07+Z10+Z11 (Z06 moved to MLC side per user); bridge / far end = Z12.",
+ "zones": {
+  "Zone_01": {
+   "name": "plaza_central_1",
+   "type": "ped_plaza",
+   "confidence": "user"
+  },
+  "Zone_02": {
+   "name": "walk_zone_02",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "S Lumpkin St"
+  },
+  "Zone_03": {
+   "name": "plaza_central_3",
+   "type": "ped_plaza",
+   "confidence": "user"
+  },
+  "Zone_04": {
+   "name": "walk_zone_04",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "MLC side"
+  },
+  "Zone_05": {
+   "name": "walk_zone_05",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "MLC side"
+  },
+  "Zone_06": {
+   "name": "walk_zone_06",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "MLC side"
+  },
+  "Zone_07": {
+   "name": "walk_zone_07",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Tate Student Center"
+  },
+  "Zone_08": {
+   "name": "walk_zone_08",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "MLC side"
+  },
+  "Zone_09": {
+   "name": "walk_zone_09",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "MLC side"
+  },
+  "Zone_10": {
+   "name": "walk_zone_10",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Tate Student Center"
+  },
+  "Zone_11": {
+   "name": "walk_zone_11",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Tate Student Center"
+  },
+  "Zone_12": {
+   "name": "walk_zone_12",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "bridge / far end"
+  }
+ },
+ "movements": []
+}

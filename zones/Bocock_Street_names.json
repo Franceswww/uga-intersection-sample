@@ -1,0 +1,99 @@
+{
+ "location": "Bocock Street at Founders",
+ "camera": "UGA-C.2.34 cam01, ~33.954917,-83.375972; view half-blocked by trees",
+ "note": "MINIMAL site by user decision. Parking turnaround loop at the end of Bocock St. Circulation (user 2026-08-30): Z09 = entrance corridor (not an arm), Z05 = loop ENTRY segment, Z06 = loop EXIT segment, Z04 = road to Denmark Hall, Z08 = parking bays (never an arm). Counted streams (revised after track inspection): ENTER/EXIT through the Z09 gate + to/from Denmark Hall; the tree splits every visit into an in-fragment and an out-fragment, each carrying one movement. Pedestrians: totals/categories only, no destination groups. All zones share one destination label \"Founders loop area\" so ped_total counts every walk; no finer grouping by user decision.",
+ "zones": {
+  "Zone_01": {
+   "name": "walk_area_a",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Founders loop area"
+  },
+  "Zone_02": {
+   "name": "walk_area_b",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Founders loop area"
+  },
+  "Zone_03": {
+   "name": "walk_area_c",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Founders loop area"
+  },
+  "Zone_04": {
+   "name": "road_denmark_hall_arm",
+   "type": "vehicle_road",
+   "short": "Denmark(Z04)",
+   "arm": "E",
+   "confidence": "user",
+   "corner": "Founders loop area"
+  },
+  "Zone_05": {
+   "name": "road_loop_entry_arm",
+   "type": "vehicle_road",
+   "short": "LoopIn(Z05)",
+   "arm": "S",
+   "confidence": "user",
+   "corner": "Founders loop area"
+  },
+  "Zone_06": {
+   "name": "road_loop_exit_arm",
+   "type": "vehicle_road",
+   "short": "LoopOut(Z06)",
+   "arm": "W",
+   "confidence": "user",
+   "corner": "Founders loop area"
+  },
+  "Zone_07": {
+   "name": "walk_area_d",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Founders loop area"
+  },
+  "Zone_08": {
+   "name": "parking_bays",
+   "type": "vehicle_road",
+   "confidence": "user",
+   "note": "parking area (user); no arm",
+   "corner": "Founders loop area"
+  },
+  "Zone_09": {
+   "name": "road_bocock_gate_arm",
+   "type": "vehicle_road",
+   "short": "BocockGate(Z09)",
+   "arm": "S",
+   "role": "gate",
+   "confidence": "user",
+   "note": "GATE at the tree line: the entrance corridor from Bocock St proper is hidden behind the big tree, so every track is born/dies here. Appear = arrived from Bocock St, disappear = left to Bocock St (rule G first/last only).",
+   "corner": "Founders loop area"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_09",
+   "to": "Zone_06",
+   "label": "ENTER       (Bocock St -> loop area)"
+  },
+  {
+   "from": "Zone_09",
+   "to": "Zone_04",
+   "label": "TO Denmark Hall"
+  },
+  {
+   "from": "Zone_06",
+   "to": "Zone_09",
+   "label": "EXIT        (loop area -> Bocock St)"
+  },
+  {
+   "from": "Zone_05",
+   "to": "Zone_09",
+   "label": "EXIT        (far loop -> Bocock St)"
+  },
+  {
+   "from": "Zone_04",
+   "to": "Zone_09",
+   "label": "FROM Denmark Hall"
+  }
+ ]
+}

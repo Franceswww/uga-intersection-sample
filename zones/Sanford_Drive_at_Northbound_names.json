@@ -1,0 +1,46 @@
+{
+ "location": "Sanford Drive at Northbound",
+ "camera": "UGA-C.5.6 cam02; Sanford Dr segment at ~33.948722,-83.376806 (user pin), bus stop in view",
+ "note": "Sanford Dr northbound segment. Zone_06 = north arm, Zone_07 = south arm; Zones 01/02 = west sidewalk. PARKING IS DELIBERATELY NOT COUNTED (user, 2026-09-01): a parking gate zone was tried over the bays at the top and produced 321 park/unpark events a day of which only 14 survived verification - the parked cars sit there all day, their boxes drift across any zone edge, and every drift mints a fake event. Three geometries were tested (full bays, 79%, and a user-trimmed version); the genuine share was 6%, 0% and 0%. The uncounted 'no_road_contact' tracks here are parked cars (median displacement 38 px), NOT missed traffic - the real counted-rate for MOVING vehicles is 69%. | 2026-09-03: west sidewalk split by end (user-approved): Zone_01 upper segment = south end (adjacent to the S arm), Zone_02 lower segment = north end (adjacent to the N arm).",
+ "zones": {
+  "Zone_01": {
+   "name": "sidewalk_west_upper",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "west sidewalk (south end)"
+  },
+  "Zone_02": {
+   "name": "sidewalk_west_walk",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "west sidewalk (north end)"
+  },
+  "Zone_06": {
+   "name": "road_sanford_north_arm",
+   "type": "vehicle_road",
+   "short": "SanfordN(Z06)",
+   "arm": "N",
+   "confidence": "user"
+  },
+  "Zone_07": {
+   "name": "road_sanford_south_arm",
+   "type": "vehicle_road",
+   "short": "SanfordS(Z07)",
+   "arm": "S",
+   "confidence": "user",
+   "note": "far end with bus stop and parking bays - parked cars stand here all day"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_07",
+   "to": "Zone_06",
+   "label": "THROUGH     (northbound, Sanford S->N)"
+  },
+  {
+   "from": "Zone_06",
+   "to": "Zone_07",
+   "label": "THROUGH     (southbound, Sanford N->S)"
+  }
+ ]
+}

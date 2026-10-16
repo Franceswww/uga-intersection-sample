@@ -1,0 +1,99 @@
+{
+ "location": "Sanford at Baldwin",
+ "camera": "UGA-C.2.6 cam02, mounted at 33.952790,-83.374707 (Military Building corner, SW)",
+ "note": "Semantics supplied by the user (2026-08-27). T-intersection: Baldwin St E-W, Sanford Dr from the south. Sanford Dr is ONE-WAY northbound, single lane (user-confirmed, re-confirmed 2026-09-01) - vehicles can only ARRIVE from it and turn east or west; nothing drives INTO it, so Z09->Z02 / Z03->Z02 are physically impossible and any such detection is a tracker red flag. The observation day matches: 815 vehicles left Sanford, 2 stray tracks entered. Z02 and Z03 are shared streets (pedestrians and vehicles); the bollard-protected plaza Z04 carries no vehicles.",
+ "zones": {
+  "Zone_01": {
+   "name": "sidewalk_corner_military",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Military Building corner (SW, camera side)"
+  },
+  "Zone_02": {
+   "name": "road_sanford_south_arm",
+   "type": "vehicle_road",
+   "short": "SanfordS(Z02)",
+   "arm": "S",
+   "confidence": "user",
+   "note": "Sanford Dr, ONE-WAY northbound single lane; shared street - pedestrians use this plaza too but it is typed vehicle for counting"
+  },
+  "Zone_03": {
+   "name": "road_baldwin_west_arm",
+   "type": "vehicle_road",
+   "short": "BaldwinW(Z03)",
+   "arm": "W",
+   "confidence": "user",
+   "note": "shared street, pedestrians AND vehicles; top boundary is the original 8/3 line (user)"
+  },
+  "Zone_04": {
+   "name": "plaza_stairs_forecourt",
+   "type": "ped_plaza",
+   "confidence": "user",
+   "corner": "central plaza (bollard-protected, zero vehicle footprint in h12)"
+  },
+  "Zone_05": {
+   "name": "crosswalk_over_baldwin",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_06": {
+   "name": "sidewalk_north_west",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Baldwin north side"
+  },
+  "Zone_07": {
+   "name": "sidewalk_stairs_landing",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Baldwin north side"
+  },
+  "Zone_08": {
+   "name": "sidewalk_north_east",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Baldwin north side"
+  },
+  "Zone_09": {
+   "name": "road_baldwin_east_arm",
+   "type": "vehicle_road",
+   "short": "BaldwinE(Z09)",
+   "arm": "E",
+   "confidence": "user"
+  },
+  "Zone_12": {
+   "name": "stairs_to_quad",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Baldwin north side"
+  },
+  "Zone_14": {
+   "name": "sidewalk_corner_journalism",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Journalism Building corner (E, across Sanford)"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_03",
+   "to": "Zone_09",
+   "label": "THROUGH     (eastbound, Baldwin W->E)"
+  },
+  {
+   "from": "Zone_09",
+   "to": "Zone_03",
+   "label": "THROUGH     (westbound, Baldwin E->W)"
+  },
+  {
+   "from": "Zone_02",
+   "to": "Zone_09",
+   "label": "RIGHT turn  (Sanford northbound -> Baldwin east)"
+  },
+  {
+   "from": "Zone_02",
+   "to": "Zone_03",
+   "label": "LEFT turn   (Sanford northbound -> Baldwin west)"
+  }
+ ]
+}

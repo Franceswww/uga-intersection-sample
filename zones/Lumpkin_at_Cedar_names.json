@@ -1,0 +1,179 @@
+{
+ "location": "Lumpkin at Cedar",
+ "camera": "UGA-C.2.4 cam04, mounted at 33.947343,-83.378026 (SW corner, Christus Victor church side)",
+ "note": "Semantics supplied by the user (2026-08-30). Signalised junction of S Lumpkin St (bends NE north of the junction, so the NORTH arm appears top-right in frame), University Ct (west arm) and Cedar St (east, mouth mostly out of frame - its roadway is out of view; vehicle GATE Zone_16 (same footprint as crosswalk Z04) catches Cedar-bound/origin traffic). Camera SW corner. Four crosswalks zoned; crosswalk usage is a separate column, never a filter. PED DESTINATION groups anchored to buildings (user): church / Wright House-Lumpkin west side / SE corner. PED DESTINATION GROUPS (user, 2026-08-30, counted by the FINAL zone of each walk): \"O-House dining (University Ct)\" = Z07+Z10+Z11+Z17 (Z17 is the University Ct roadway - many walk on it since car traffic is light); \"Christus Victor church corner\" = Z06+Z08; \"Myers Hall\" = Z05; \"Lumpkin north\" = Z09+Z12+Z15 (Z15 roadway tagged to catch road-walkers heading north). Z13 (Lumpkin S roadway) is deliberately untagged.",
+ "zones": {
+  "Zone_01": {
+   "name": "crosswalk_over_lumpkin_south",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_02": {
+   "name": "crosswalk_over_university",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_03": {
+   "name": "crosswalk_over_lumpkin_north",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_04": {
+   "name": "crosswalk_cedar_side",
+   "type": "ped_crosswalk",
+   "confidence": "user"
+  },
+  "Zone_05": {
+   "name": "sidewalk_se_corner",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Myers Hall (SE)"
+  },
+  "Zone_06": {
+   "name": "sidewalk_church_corner",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Christus Victor church corner (SW)"
+  },
+  "Zone_07": {
+   "name": "sidewalk_church_north",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "O-House dining (University Ct)"
+  },
+  "Zone_08": {
+   "name": "sidewalk_church_west",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Christus Victor church corner (SW)"
+  },
+  "Zone_09": {
+   "name": "corner_pad_crosswalk_a",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Lumpkin north",
+   "note": "small corner pad attached to the crosswalks (user)"
+  },
+  "Zone_10": {
+   "name": "corner_pad_crosswalk_b",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "O-House dining (University Ct)",
+   "note": "small corner pad attached to the crosswalks (user)"
+  },
+  "Zone_11": {
+   "name": "sidewalk_wright_house",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "O-House dining (University Ct)"
+  },
+  "Zone_12": {
+   "name": "sidewalk_lumpkin_west",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Lumpkin north"
+  },
+  "Zone_13": {
+   "name": "road_lumpkin_south_arm",
+   "type": "vehicle_road",
+   "short": "LumpkinS(Z13)",
+   "arm": "S",
+   "confidence": "user"
+  },
+  "Zone_14": {
+   "name": "road_junction_box",
+   "type": "vehicle_road",
+   "short": "Center(Z14)",
+   "role": "center",
+   "confidence": "user"
+  },
+  "Zone_15": {
+   "name": "road_lumpkin_north_arm",
+   "type": "vehicle_road",
+   "short": "LumpkinN(Z15)",
+   "arm": "N",
+   "confidence": "user",
+   "note": "Lumpkin bends NE north of the junction, appears top-right in frame",
+   "corner": "Lumpkin north"
+  },
+  "Zone_17": {
+   "name": "road_university_west_arm",
+   "type": "vehicle_road",
+   "short": "UnivCt(Z17)",
+   "arm": "W",
+   "confidence": "user",
+   "corner": "O-House dining (University Ct)"
+  },
+  "Zone_16": {
+   "name": "road_cedar_gate_arm",
+   "type": "vehicle_road",
+   "short": "CedarGate(Z16)",
+   "arm": "E",
+   "role": "gate",
+   "confidence": "user",
+   "note": "user idea 2026-08-30: Cedar St roadway is outside the view, so its crosswalk footprint doubles as a vehicle GATE (same polygon as ped Zone_04) - a track that APPEARS here came from Cedar, one that DISAPPEARS here left to Cedar; mid-journey brushes are invalid per rule G"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_13",
+   "to": "Zone_15",
+   "label": "THROUGH     (northbound, Lumpkin S->N)"
+  },
+  {
+   "from": "Zone_15",
+   "to": "Zone_13",
+   "label": "THROUGH     (southbound, Lumpkin N->S)"
+  },
+  {
+   "from": "Zone_13",
+   "to": "Zone_17",
+   "label": "LEFT turn   (Lumpkin northbound -> University Ct)"
+  },
+  {
+   "from": "Zone_17",
+   "to": "Zone_13",
+   "label": "RIGHT turn  (University Ct -> Lumpkin south)"
+  },
+  {
+   "from": "Zone_15",
+   "to": "Zone_17",
+   "label": "RIGHT turn  (Lumpkin southbound -> University Ct)"
+  },
+  {
+   "from": "Zone_17",
+   "to": "Zone_15",
+   "label": "LEFT turn   (University Ct -> Lumpkin north)"
+  },
+  {
+   "from": "Zone_13",
+   "to": "Zone_16",
+   "label": "RIGHT turn  (Lumpkin northbound -> Cedar)"
+  },
+  {
+   "from": "Zone_16",
+   "to": "Zone_13",
+   "label": "LEFT turn   (Cedar -> Lumpkin south)"
+  },
+  {
+   "from": "Zone_15",
+   "to": "Zone_16",
+   "label": "LEFT turn   (Lumpkin southbound -> Cedar)"
+  },
+  {
+   "from": "Zone_16",
+   "to": "Zone_15",
+   "label": "RIGHT turn  (Cedar -> Lumpkin north)"
+  },
+  {
+   "from": "Zone_17",
+   "to": "Zone_16",
+   "label": "THROUGH     (eastbound, University Ct -> Cedar)"
+  },
+  {
+   "from": "Zone_16",
+   "to": "Zone_17",
+   "label": "THROUGH     (westbound, Cedar -> University Ct)"
+  }
+ ]
+}

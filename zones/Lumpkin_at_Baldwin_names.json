@@ -1,0 +1,183 @@
+{
+  "location": "Lumpkin at Baldwin",
+  "camera": "cam02 at roughly 33.952940,-83.376606, on the SW corner of S Lumpkin St x Baldwin St, looking NE. In frame that puts north to the upper left, east to the right, and south off the bottom-right corner. The sidewalk directly under the camera is Zone_09.",
+  "note": "Semantics from the user's hand sketch (2026-08-17): roads 6/7/15, crosswalks 1/4/5, diagonal crossing crosswalks 2/3, sidewalks 8-14. S Lumpkin runs N-S, Baldwin runs E-W, and they are two different streets. This is a T junction: Baldwin ends here and has an east arm only, so the three arms N/E/S are the whole intersection, not a four-arm junction with one arm missing. The S Lumpkin south leg leaves frame at the bottom-right corner, so Zone_16 was added as a gate on the user's suggestion.",
+  "zones": {
+    "Zone_01": {
+      "name": "crosswalk_over_lumpkin_north",
+      "type": "ped_crosswalk",
+      "confidence": "user",
+      "crosses": "Zone_07",
+      "note": "drawn above the junction, between the S Lumpkin kerb lines"
+    },
+    "Zone_02": {
+      "name": "crosswalk_diagonal_a",
+      "type": "ped_crosswalk",
+      "confidence": "user",
+      "role": "diagonal",
+      "note": "one of the two crossing crosswalks; principal axis 52 deg. Shares ground with the Zone_16 vehicle gate, which is safe because vehicles and pedestrians are ledgered separately"
+    },
+    "Zone_03": {
+      "name": "crosswalk_diagonal_b",
+      "type": "ped_crosswalk",
+      "confidence": "user",
+      "role": "diagonal",
+      "note": "the other crossing crosswalk; principal axis 2 deg, so the two meet at about 50 deg"
+    },
+    "Zone_04": {
+      "name": "crosswalk_over_lumpkin_south",
+      "type": "ped_crosswalk",
+      "confidence": "user",
+      "crosses": "Zone_16",
+      "note": "drawn below the junction; largely out of frame at the bottom right"
+    },
+    "Zone_05": {
+      "name": "crosswalk_over_baldwin_east",
+      "type": "ped_crosswalk",
+      "confidence": "user",
+      "crosses": "Zone_15"
+    },
+    "Zone_06": {
+      "name": "road_junction_box",
+      "type": "vehicle_road",
+      "short": "Center(Z06)",
+      "confidence": "user",
+      "role": "center",
+      "note": "the central road surface, marked 中央 in the user's sketch"
+    },
+    "Zone_07": {
+      "name": "road_lumpkin_north_arm",
+      "type": "vehicle_road",
+      "short": "LumpkinN(Z07)",
+      "confidence": "user",
+      "arm": "N",
+      "note": "S Lumpkin roadway north of the junction, where vehicles queue at the signal"
+    },
+    "Zone_08": {
+      "name": "sidewalk_west_08",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Lumpkin N (West)"
+    },
+    "Zone_09": {
+      "name": "sidewalk_camera_corner",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Lumpkin S (Correll Hall)",
+      "note": "the walk directly under the camera"
+    },
+    "Zone_10": {
+      "name": "sidewalk_west_10",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Lumpkin N (West)"
+    },
+    "Zone_11": {
+      "name": "sidewalk_east_11",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Lumpkin N (Brown Hall)"
+    },
+    "Zone_12": {
+      "name": "sidewalk_east_12",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Baldwin E"
+    },
+    "Zone_13": {
+      "name": "sidewalk_east_13",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Lumpkin N (Brown Hall)"
+    },
+    "Zone_14": {
+      "name": "sidewalk_east_14",
+      "type": "ped_sidewalk",
+      "confidence": "user",
+      "corner": "Lumpkin N (Brown Hall)"
+    },
+    "Zone_15": {
+      "name": "road_baldwin_east_arm",
+      "type": "vehicle_road",
+      "short": "BaldwinE(Z15)",
+      "confidence": "user",
+      "arm": "E",
+      "note": "Baldwin St roadway east of the junction"
+    },
+    "Zone_16": {
+      "name": "road_lumpkin_south_arm",
+      "type": "vehicle_road",
+      "short": "LumpkinS(Z16)",
+      "confidence": "user",
+      "arm": "S",
+      "role": "gate",
+      "note": "The south leg leaves frame with no roadway to draw, so this is a 300 px band on the screenline the user positioned. Direction is not encoded in the band: flow_typed decides a movement from the order of the arm sequence, so one gate serves both entering and leaving. Width was set from data - vehicle steps there run 79 px median, 256 px at p95, so a zero-width line would be stepped over."
+    },
+    "Zone_17": {
+      "name": "exit_baldwin_east",
+      "type": "ped_sidewalk",
+      "role": "offframe",
+      "confidence": "user",
+      "note": "people who walk out of frame along the north side of Baldwin, heading east past Comparative Literature",
+      "corner": "Baldwin E"
+    },
+    "Zone_18": {
+      "name": "exit_fine_arts",
+      "type": "ped_sidewalk",
+      "role": "offframe",
+      "confidence": "user",
+      "note": "people who walk out of frame on the east side of Lumpkin, south of Baldwin, toward the Fine Arts Building",
+      "corner": "Fine Arts"
+    },
+    "Zone_19": {
+      "name": "exit_lumpkin_south",
+      "type": "ped_sidewalk",
+      "role": "offframe",
+      "confidence": "user",
+      "note": "people who walk out of frame heading south on the west side of Lumpkin, toward Correll Hall and Terry College",
+      "corner": "Lumpkin S (Correll Hall)"
+    },
+    "Zone_20": {
+      "name": "exit_lumpkin_far_north",
+      "type": "ped_sidewalk",
+      "role": "offframe",
+      "confidence": "user",
+      "corner": "Lumpkin N (Brown Hall)",
+      "note": "the far mouth of Lumpkin where receding walkers become too small to track; the user ruled these count as Lumpkin N (Brown Hall)"
+    }
+  },
+  "movements": [
+    {
+      "from": "Zone_07",
+      "to": "Zone_16",
+      "label": "THROUGH     (southbound, S Lumpkin N->S)"
+    },
+    {
+      "from": "Zone_16",
+      "to": "Zone_07",
+      "label": "THROUGH     (northbound, S Lumpkin S->N)"
+    },
+    {
+      "from": "Zone_07",
+      "to": "Zone_15",
+      "label": "LEFT turn   (S Lumpkin southbound -> Baldwin east)"
+    },
+    {
+      "from": "Zone_15",
+      "to": "Zone_07",
+      "label": "RIGHT turn  (Baldwin westbound -> S Lumpkin north)"
+    },
+    {
+      "from": "Zone_16",
+      "to": "Zone_15",
+      "label": "RIGHT turn  (S Lumpkin northbound -> Baldwin east)"
+    },
+    {
+      "from": "Zone_15",
+      "to": "Zone_16",
+      "label": "LEFT turn   (Baldwin westbound -> S Lumpkin south)"
+    }
+  ],
+  "arms_note": "Three arms, which is complete for a T junction: Zone_07 (S Lumpkin north), Zone_15 (Baldwin east), Zone_16 (S Lumpkin south gate). Six movements, all of them countable.",
+  "ped_groups_note": "Pedestrian destinations are reported as five directions, set by the user on 2026-08-17 and named from the Google map: Lumpkin N (West) is the 450 S Lumpkin St frontage, Lumpkin N (Brown Hall) is the far side facing Joseph E Brown Hall, Lumpkin S (Correll Hall) runs south past Correll Hall and Terry College, Baldwin E heads east past Comparative Literature, and Fine Arts is the corner by the Fine Arts Building. Zone_17/18/19 are off-frame exit bands: the camera cannot see the far corners, so a walk that leaves the picture is recorded by the edge it left through instead of being dropped."
+}

@@ -1,0 +1,121 @@
+{
+  "note": "Semantic names for Lumpkin_at_Baxter cam02 zones, v2 after user corrections. Local landmark naming (bolton = dining hall side, tate = plaza side), no compass. type: vehicle_road | ped_crosswalk | ped_sidewalk | ped_plaza | unknown.",
+  "zones": {
+    "Zone_01": {
+      "name": "crosswalk_main_over_lumpkin",
+      "type": "ped_crosswalk",
+      "confidence": "high"
+    },
+    "Zone_02": {
+      "name": "crosswalk_center_band",
+      "type": "ped_crosswalk",
+      "confidence": "high"
+    },
+    "Zone_03": {
+      "name": "crosswalk_at_tate_plaza",
+      "type": "ped_crosswalk",
+      "confidence": "confirmed",
+      "note": "crossing at the Tate plaza. Carries the Tate side corner label directly (user, 2026-08-18): a walk ending here has reached the Tate side - it was first modelled as a separate leads_to inheritance, then folded in as an ordinary corner zone to keep the chain at three steps.",
+      "corner": "Tate side"
+    },
+    "Zone_04": {
+      "name": "tate_plaza",
+      "type": "ped_plaza",
+      "confidence": "confirmed",
+      "corner": "Tate side"
+    },
+    "Zone_05": {
+      "name": "sidewalk_tate_side",
+      "type": "ped_sidewalk",
+      "confidence": "confirmed",
+      "note": "sidewalk plus a small crosswalk piece",
+      "corner": "Tate side"
+    },
+    "Zone_06": {
+      "name": "crosswalk_intersecting_far",
+      "type": "ped_crosswalk",
+      "confidence": "confirmed",
+      "note": "intersecting crosswalk lines (user confirmed)"
+    },
+    "Zone_07": {
+      "name": "crosswalk_to_bolton",
+      "type": "ped_crosswalk",
+      "confidence": "confirmed",
+      "note": "connects Bolton side to Zone_09 corner island"
+    },
+    "Zone_08": {
+      "name": "crosswalk_baxter_west",
+      "type": "ped_crosswalk",
+      "confidence": "confirmed"
+    },
+    "Zone_09": {
+      "name": "corner_island_bollards",
+      "type": "ped_sidewalk",
+      "confidence": "confirmed",
+      "note": "adjoins Zone_07 crosswalk",
+      "corner": "Ivester corner"
+    },
+    "Zone_10": {
+      "name": "curb_fragment_lumpkin_side",
+      "type": "ped_sidewalk",
+      "confidence": "medium",
+      "corner": "Ivester corner"
+    },
+    "Zone_11": {
+      "name": "sidewalk_planter_island",
+      "type": "ped_sidewalk",
+      "confidence": "medium",
+      "corner": "Ivester corner"
+    },
+    "Zone_12": {
+      "name": "sidewalk_at_detour_sign",
+      "type": "ped_sidewalk",
+      "confidence": "medium",
+      "corner": "Ivester corner"
+    },
+    "Zone_13": {
+      "name": "road_baxter_arm",
+      "type": "vehicle_road",
+      "confidence": "high",
+      "note": "Baxter St tee arm from west (faces Tate plaza in frame)"
+    },
+    "Zone_14": {
+      "name": "road_intersection_center",
+      "type": "vehicle_road",
+      "confidence": "confirmed",
+      "note": "big central pavement of the intersection (user confirmed)"
+    },
+    "Zone_15": {
+      "name": "road_lumpkin_north_arm",
+      "type": "vehicle_road",
+      "confidence": "high",
+      "note": "Lumpkin NORTH side of intersection (user confirmed); Z15->Z16 travel = southbound"
+    },
+    "Zone_16": {
+      "name": "road_lumpkin_south_arm",
+      "type": "vehicle_road",
+      "confidence": "high",
+      "note": "Lumpkin SOUTH side (user confirmed); upper-left road in frame"
+    },
+    "Zone_17": {
+      "name": "bolton_entrance_mid",
+      "type": "ped_plaza",
+      "confidence": "confirmed",
+      "note": "Bolton dining hall entrance; 17/18/19 split to tell where people come from",
+      "corner": "Bolton side"
+    },
+    "Zone_18": {
+      "name": "bolton_entrance_lumpkin_side",
+      "type": "ped_plaza",
+      "confidence": "confirmed",
+      "corner": "Bolton side"
+    },
+    "Zone_19": {
+      "name": "bolton_entrance_baxter_side",
+      "type": "ped_plaza",
+      "confidence": "confirmed",
+      "corner": "Bolton side"
+    }
+  },
+  "ped_groups_note": "Pedestrian destinations are the three corners the user confirmed on 2026-08-17: Tate side (Z04/Z05), Bolton side (Z17/Z18/Z19), Ivester corner (Z09-Z12). Only these carry a corner label, so crosswalks and roadways are not destinations. Copied here from package_for_abhinav so the distributed package stays untouched."
+}

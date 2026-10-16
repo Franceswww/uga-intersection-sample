@@ -1,0 +1,53 @@
+{
+ "location": "Lumpkin at No Name Park",
+ "camera": "UGA-C.1.13 cam02",
+ "note": "Semantics supplied by the user (2026-08-28). SEGMENT count on Lumpkin St, not a junction. TWO-WAY, single lane each direction plus a CENTER TURN LANE (3 lanes total). Z05 = NORTH segment (far end, next to the Tate parking deck); Z04 = SOUTH segment (near). Pedestrians: Z01 camera-side sidewalk, Z02 far-side sidewalk; crossings register via the sidewalks/jaywalk. PED DIRECTION (user 2026-08-28): walks are split S->N vs N->S from first/last zone: Zone_01->Zone_02 = S->N (northbound), Zone_02->Zone_01 = N->S. Z02 is the FAR/NORTH sidewalk segment (next to Tate deck), Z01 the NEAR/SOUTH segment. | 2026-08-31: added Zone_07 = Clark Howell Hall side sidewalk (ped coverage 52%->96%); the auto-traced Zone_06 was deleted by the user. | 2026-09-01 (user): ped destinations renamed by which END OF S LUMPKIN ST the walk finishes at, not by camera geometry - NEAR the camera = 'S Lumpkin south' (Zone_01), AWAY from the camera = 'S Lumpkin north' (Zone_02). Zone_07 stays 'Clark Howell Hall side' (the opposite sidewalk).",
+ "zones": {
+  "Zone_01": {
+   "name": "sidewalk_toward_lumpkin_south",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "S Lumpkin south"
+  },
+  "Zone_02": {
+   "name": "sidewalk_toward_lumpkin_north",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "S Lumpkin north"
+  },
+  "Zone_04": {
+   "name": "road_lumpkin_south_arm",
+   "type": "vehicle_road",
+   "short": "LumpkinS(Z04)",
+   "arm": "S",
+   "confidence": "user"
+  },
+  "Zone_05": {
+   "name": "road_lumpkin_north_arm",
+   "type": "vehicle_road",
+   "short": "LumpkinN(Z05)",
+   "arm": "N",
+   "confidence": "user",
+   "note": "far end, adjacent to the Tate parking deck (user)"
+  },
+  "Zone_07": {
+   "name": "sidewalk_clark_howell",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Clark Howell Hall side",
+   "note": "far sidewalk on the Clark Howell Hall side; added 2026-08-31 - half the pedestrian points had been falling outside every ped zone"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_04",
+   "to": "Zone_05",
+   "label": "THROUGH     (northbound, Lumpkin S->N)"
+  },
+  {
+   "from": "Zone_05",
+   "to": "Zone_04",
+   "label": "THROUGH     (southbound, Lumpkin N->S)"
+  }
+ ]
+}

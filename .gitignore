@@ -1,0 +1,5 @@
+clips/*.mp4
+results/
+results_test/
+__pycache__/
+*.pt

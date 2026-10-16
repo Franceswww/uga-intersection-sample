@@ -1,0 +1,49 @@
+{
+ "location": "Bookstore Southwest",
+ "camera": "UGA-C.4.28 cam02, at the path crossing between Tate Student Center and the UGA Bookstore (user map pin)",
+ "note": "PEDESTRIAN-ONLY plaza by user decision (2026-08-30) - no vehicle zones, the occasional service cart lands in no_road_contact. Z05 is the CENTRAL plaza (transit area, no destination label - walks ending there count as x_ped_no_destination = track lost mid-plaza). Destination groups by building: Bookstore = Z01+Z03, Tate Student Center = Z02+Z06+Z07, MLC (Zell B. Miller) = Z04.",
+ "zones": {
+  "Zone_01": {
+   "name": "walk_bookstore_south",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Bookstore side"
+  },
+  "Zone_02": {
+   "name": "walk_tate_path",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Tate Student Center"
+  },
+  "Zone_03": {
+   "name": "walk_bookstore_east",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Bookstore side"
+  },
+  "Zone_04": {
+   "name": "walk_mlc_direction",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "MLC (Zell B. Miller)"
+  },
+  "Zone_05": {
+   "name": "plaza_central",
+   "type": "ped_plaza",
+   "confidence": "user"
+  },
+  "Zone_06": {
+   "name": "walk_tate_upper_a",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Tate Student Center"
+  },
+  "Zone_07": {
+   "name": "walk_tate_upper_b",
+   "type": "ped_sidewalk",
+   "confidence": "user",
+   "corner": "Tate Student Center"
+  }
+ },
+ "movements": []
+}

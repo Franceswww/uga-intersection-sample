@@ -1,0 +1,97 @@
+{
+ "location": "Stadium West (cam03)",
+ "camera": "UGA-C.2.7 cam03 - Sanford Dr bus-stop plaza at the Tate Center. Zones verified against a cam03 frame; cam04 (the Aug-27 detection) is a DIFFERENT view and these zones do not fit it.",
+ "note": "Semantics from the user (2026-08-31). NOT a junction: a two-way single-lane road segment, no centre. Z12 = north arm, Z13 = south arm, Z11 = the roadway between them (deliberately NOT an arm and NOT a centre, so the movement chain is simply north<->south and the centre-less exit-direction test applies, as at Physics). Z05 is the bus-stop waiting area (originally Z05+Z06, merged by the user); Z08 is the old Z08+Z09 merged. PED DESTINATIONS: Tate side = Z04+Z05+Z07+Z10+Z14; Stadium side = Z01+Z02; Sanford sidewalk south end = Z03+Z08. Bus dwell (a stopped bus >=25 s) is reported separately - this is the only site where buses outnumber cars.",
+ "zones": {
+  "Zone_01": {
+   "name": "walk_stadium_a",
+   "type": "ped_sidewalk",
+   "corner": "Stadium side",
+   "confidence": "user"
+  },
+  "Zone_02": {
+   "name": "walk_stadium_b",
+   "type": "ped_sidewalk",
+   "corner": "Stadium side",
+   "confidence": "user"
+  },
+  "Zone_03": {
+   "name": "walk_sanford_south_a",
+   "type": "ped_sidewalk",
+   "corner": "Sanford sidewalk south end",
+   "confidence": "user"
+  },
+  "Zone_04": {
+   "name": "walk_tate_a",
+   "type": "ped_sidewalk",
+   "corner": "Tate side",
+   "confidence": "user"
+  },
+  "Zone_05": {
+   "name": "walk_tate_bus_waiting",
+   "type": "ped_sidewalk",
+   "corner": "Tate side",
+   "confidence": "user",
+   "note": "bus-stop waiting area (user merged old Z05+Z06)"
+  },
+  "Zone_07": {
+   "name": "walk_tate_b",
+   "type": "ped_sidewalk",
+   "corner": "Tate side",
+   "confidence": "user"
+  },
+  "Zone_08": {
+   "name": "walk_sanford_south_b",
+   "type": "ped_sidewalk",
+   "corner": "Sanford sidewalk south end",
+   "confidence": "user",
+   "note": "user merged old Z08+Z09"
+  },
+  "Zone_10": {
+   "name": "walk_tate_c",
+   "type": "ped_sidewalk",
+   "corner": "Tate side",
+   "confidence": "user"
+  },
+  "Zone_11": {
+   "name": "road_mid_segment",
+   "type": "vehicle_road",
+   "short": "Road(Z11)",
+   "confidence": "user",
+   "note": "roadway between the two arms; NO 'arm' in the name on purpose, and no centre role"
+  },
+  "Zone_12": {
+   "name": "road_north_arm",
+   "type": "vehicle_road",
+   "short": "North(Z12)",
+   "arm": "N",
+   "confidence": "user"
+  },
+  "Zone_13": {
+   "name": "road_south_arm",
+   "type": "vehicle_road",
+   "short": "South(Z13)",
+   "arm": "S",
+   "confidence": "user"
+  },
+  "Zone_14": {
+   "name": "walk_tate_plaza",
+   "type": "ped_sidewalk",
+   "corner": "Tate side",
+   "confidence": "draft",
+   "note": "upper Tate plaza - shape traced from the pedestrian points that fell outside every zone (h12); user to adjust"
+  }
+ },
+ "movements": [
+  {
+   "from": "Zone_13",
+   "to": "Zone_12",
+   "label": "THROUGH     (northbound, south -> north)"
+  },
+  {
+   "from": "Zone_12",
+   "to": "Zone_13",
+   "label": "THROUGH     (southbound, north -> south)"
+  }
+ ]
+}
